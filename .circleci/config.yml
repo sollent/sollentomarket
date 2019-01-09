@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/php:7.2.4-apache-stretch-node-browsers
     steps:
-      - ckeckout
+      - checkout
       - run:
           name: Install PHP MySQL
           command: sudo docker-php-ext-install
