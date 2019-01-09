@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install PHP MySQL
-          command: sudo docker-php-ext-install
+          command: sudo docker-php-ext-install pdo_mysql
       - run:
           name: Composer
           command: sudo composer self-update
