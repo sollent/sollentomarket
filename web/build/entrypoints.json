@@ -1,0 +1,28 @@
+{
+  "entrypoints": {
+    "app": {
+      "css": [
+        "/build/app.css"
+      ],
+      "js": [
+        "/build/app.js"
+      ]
+    },
+    "custom": {
+      "css": [
+        "/build/custom.css"
+      ],
+      "js": [
+        "/build/custom.js"
+      ]
+    },
+    "homepage": {
+      "css": [
+        "/build/homepage.css"
+      ],
+      "js": [
+        "/build/homepage.js"
+      ]
+    }
+  }
+}

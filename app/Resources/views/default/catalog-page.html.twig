@@ -1,0 +1,261 @@
+{% extends 'common.html.twig' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block title %} Каталог {% endblock %}
+
+{% block body %}
+    
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    
+    {% block wrapper_start %} {{ parent() }} {% endblock %}
+	
+	{% block main %}
+        
+        <div class="container">
+            
+            <div class="main_block">
+                <div class="row">
+                    <div class="col xl3 col-catalog-menu">
+                        <div class="catalog_menu">
+                            <ul class="collapsible expandable">
+                                <li class="active">
+                                    <div class="collapsible-header">Умные часы<i class="material-icons">arrow_drop_down</i></div>
+                                    <div class="collapsible-body">
+                                        <div class="collection">
+                                            <a href="" class="collection-item">Часы с циферблатом</a>
+                                            <a href="" class="collection-item active">Квадратные</a>
+                                            <a href="" class="collection-item">Фирма watch</a>
+                                            <a href="" class="collection-item">Водонепроницаемые</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header">Микронаушники<i class="material-icons">arrow_drop_down</i></div>
+                                    <div class="collapsible-body">
+                                        <div class="collection">
+                                            <a href="" class="collection-item">Часы с циферблатом</a>
+                                            <a href="" class="collection-item">Квадратные</a>
+                                            <a href="" class="collection-item">Фирма watch</a>
+                                            <a href="" class="collection-item">Водонепроницаемые</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header">Носимая электроника<i class="material-icons">arrow_drop_down</i></div>
+                                    <div class="collapsible-body">
+                                        <div class="collection">
+                                            <a href="" class="collection-item">Часы с циферблатом</a>
+                                            <a href="" class="collection-item">Квадратные</a>
+                                            <a href="" class="collection-item">Фирма watch</a>
+                                            <a href="" class="collection-item">Водонепроницаемые</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col s10 m11 l11 xl9">
+                        <nav class="search_bar">
+                            <div class="nav-wrapper">
+                                <form>
+                                    <div class="input-field">
+                                        <input id="search" type="search" placeholder="Search" required>
+                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col s2 m1 l1 hide-on-extra-large-only responsive-catalog-menu center">
+                        <a href="#responsive-catalog-menu-modal" class="btn-floating waves-effect waves-light catalog-menu-button modal-trigger pulse"><i class="material-icons">apps</i></a>
+                        <!--Bottom modal catalog menu-->
+                        <div id="responsive-catalog-menu-modal" class="modal bottom-sheet">
+							{#<h4>Каталог</h4>#}
+                            <div class="modal-close"><i class="material-icons">close</i></div>
+                            <div class="modal-content">
+                                <div class="row hide-on-small-and-down">
+                                    <div class="col s12 m6 l3">
+                                        <a href="">
+                                            <div class="card category_card hoverable">
+                                                <div class="card-title">
+                                                    <h5>Умные часы</h5>
+                                                </div>
+                                                <div class="card-image center">
+                                                    <img src="{{ asset('assets/img/watch.jpg') }}">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col s12 m6 l3">
+                                        <a href="">
+                                            <div class="card category_card hoverable">
+                                                <div class="card-title">
+                                                    <h5>Микронаушники</h5>
+                                                </div>
+                                                <div class="card-image center">
+                                                    <img src="{{ asset('assets/img/nano.png') }}">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col s12 m6 l3">
+                                        <a href="">
+                                            <div class="card category_card hoverable">
+                                                <div class="card-title">
+                                                    <h5>Электроника</h5>
+                                                </div>
+                                                <div class="card-image center">
+                                                    <img src="{{ asset('assets/img/electronics.png') }}">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col s12 m6 l3">
+                                        <a href="">
+                                            <div class="card category_card hoverable">
+                                                <div class="card-title">
+                                                    <h5>Канцелярия</h5>
+                                                </div>
+                                                <div class="card-image center">
+                                                    <img src="{{ asset('assets/img/book.jpg') }}">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="collection hide-on-med-and-up">
+                                    <li class="collection-item avatar">
+                                        <img src="{{ asset('assets/img/watch.jpg') }}" alt="" class="circle">
+                                        <span class="title left">Умные часы</span>
+                                    </li>
+                                    <li class="collection-item avatar">
+                                        <img src="{{ asset('assets/img/nano.png') }}" alt="" class="circle">
+                                        <span class="title left">Микронаушники</span>
+                                    </li>
+                                    <li class="collection-item avatar">
+                                        <img src="{{ asset('assets/img/electronics.png') }}" alt="" class="circle">
+                                        <span class="title left">Электроника</span>
+                                    </li>
+                                    <li class="collection-item avatar">
+                                        <img src="{{ asset('assets/img/book.jpg') }}" alt="" class="circle">
+                                        <span class="title left">Канцелярия</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col xl9">
+                            <div class="products_content">
+                                <nav class="breadcrumb-section">
+                                    <div class="nav-wrapper">
+                                        <div class="col s12">
+                                            <a href="" class="breadcrumb">Каталог</a>
+                                            <a href="" class="breadcrumb second-child">Умные часы</a>
+                                            <a href="" class="breadcrumb">Водонепроницаемые</a>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <div class="row">
+                                    <div class="col xl6 l4 m6 s12">
+                                        <div class="card product_card hoverable">
+                                            <div class="card-image">
+                                                <div class="product-image">
+                                                    <img src="{{ asset('assets/img/pruducts/1.jpg') }}">
+                                                </div>
+                                                <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title">Умные часы DZ09</span>
+                                                <p>Умные часы DZ09 - лучший помощник на экзаменах и зачетах...</p>
+                                                <h4 class="price-number">35 BYN</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col xl6 l4 m6 s12">
+                                        <div class="card product_card hoverable">
+                                            <div class="card-image">
+                                                <div class="product-image">
+                                                    <img src="{{ asset('assets/img/pruducts/2.jpg') }}">
+                                                </div>
+                                                <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title">Умные часы DZ09</span>
+                                                <p>Умные часы DZ09 - лучший помощник на экзаменах и зачетах...</p>
+                                                <h4 class="price-number">35 BYN</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col xl6 l4 m6 s12">
+                                        <div class="card product_card hoverable">
+                                            <div class="card-image">
+                                                <div class="product-image">
+                                                    <img src="{{ asset('assets/img/pruducts/3.jpg') }}">
+                                                </div>
+                                                <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title">Умные часы DZ09</span>
+                                                <p>Умные часы DZ09 - лучший помощник на экзаменах и зачетах...</p>
+                                                <h4 class="price-number">35 BYN</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col xl6 l4 m6 s12">
+                                        <div class="card product_card hoverable">
+                                            <div class="card-image">
+                                                <div class="product-image">
+                                                    <img src="{{ asset('assets/img/pruducts/4.jpg') }}">
+                                                </div>
+                                                <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title">Умные часы DZ09</span>
+                                                <p>Умные часы DZ09 - лучший помощник на экзаменах и зачетах...</p>
+                                                <h4 class="price-number">35 BYN</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pagination-block center">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                                    <li class="active"><a href="#!">1</a></li>
+                                    <li class="waves-effect"><a href="#!">2</a></li>
+                                    <li class="waves-effect"><a href="#!">3</a></li>
+                                    <li class="waves-effect"><a href="#!">4</a></li>
+                                    <li class="waves-effect"><a href="#!">5</a></li>
+                                    <li class="waves-effect"><a href="#!">6</a></li>
+                                    <li class="waves-effect"><a href="#!">7</a></li>
+                                    <li class="waves-effect"><a href="#!">8</a></li>
+                                    <li class="waves-effect"><a href="#!">9</a></li>
+                                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                                </ul>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                </div>
+            
+            </div>
+        </div>
+	
+	{% endblock %}
+    
+    {% block wrapper_end %} {{ parent() }} {% endblock %}
+    
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+ 
+{% endblock %}

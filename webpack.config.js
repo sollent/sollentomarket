@@ -1,0 +1,15 @@
+const Encore = require('@symfony/webpack-encore');
+
+Encore
+    .setOutputPath('web/build')
+    .setPublicPath('/build')
+    .addEntry('app', './web/assets/libs/materialize-sass/sass/materialize.scss')
+    .addEntry('custom', './web/assets/scss/style.scss')
+    .addEntry('homepage', './web/assets/scss/homepage.scss')
+    .enableSassLoader()
+    .autoProvidejQuery()
+    .cleanupOutputBeforeBuild()
+    .enableBuildNotifications()
+;
+
+module.exports = Encore.getWebpackConfig();

@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{{ asset('build/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('build/custom.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/libs/animate/animate.css') }}">
+{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {% block header %}
+	
+		<div class="header">
+			<div class="navbar-fixed">
+				<nav>
+					<div class="nav-wrapper">
+						<div class="container">
+							<a href="" class="brand-logo">Sollento market</a>
+							<ul class="right hide-on-med-and-down">
+								<li><a href="{{ path('homepage-action') }}">Главная</a></li>
+								<li><a href="{{ path('catalog-page-action') }}">Каталог</a></li>
+								<li><a href="">Новости</a></li>
+								<li><a href="">Контакты</a></li>
+								<li><a href="">О нас</a></li>
+							</ul>
+						</div>
+						<a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+					</div>
+					{% block cart_header_block %}
+						<div class="nav-content">
+							<div class="cart-block">
+								<div class="row">
+									<div class="col hide-on-large-only">
+										<a href="">12 товаров</a>
+									</div>
+									<div class="col xl5 cart-button-col">
+										<a class="btn-floating btn-large halfway-fab waves-effect waves-light teal cart-big-button">
+											<i class="material-icons">add_shopping_cart</i>
+										</a>
+									</div>
+									<div class="col xl7 hide-on-med-and-down">
+										<a href="">12 товаров</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endblock %}
+				</nav>
+			</div>
+		
+			<ul class="sidenav" id="mobile-demo">
+				<li><a href="" class="brand-logo">Sollento</a></li>
+				<li><a href="{{ path('homepage-action') }}">Главная</a></li>
+				<li><a href="{{ path('catalog-page-action') }}">Каталог</a></li>
+				<li><a href="">Новости</a></li>
+				<li><a href="">Контакты</a></li>
+				<li><a href="">О нас</a></li>
+			</ul>
+		</div>
+
+	{% endblock %}
+	
+	{% block wrapper_start %}
+		<div class="wrapper">
+	{% endblock %}
+	
+	{% block wrapper_end %}
+		</div>
+	{% endblock %}
+	
+	{% block footer %}
+		
+		<footer class="page-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Sollento market</h5>
+						<p class="grey-text text-lighten-4">Мы рады видеть вас в нашем интернет-магазине. У нас вы найдете для себя лучших помошников в сдаче экзаменов, контрольных и самостоятельных работ.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Меню</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-3" href="">Главная</a></li>
+							<li><a class="grey-text text-lighten-3" href="">Каталог</a></li>
+							<li><a class="grey-text text-lighten-3" href="">Новости</a></li>
+							<li><a class="grey-text text-lighten-3" href="">Контакты</a></li>
+							<li><a class="grey-text text-lighten-3" href="">О нас</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2018 Copyright Text
+					<a class="grey-text text-lighten-4 right" href="#!">Сайт разработан на Symfony 3</a>
+				</div>
+			</div>
+		</footer>
+	
+	
+	{% endblock %}
+	
+	
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="{{ asset('/assets/libs/materialize-js/js/materialize.min.js') }}"></script>
+	<script src="{{ asset('/assets/libs/materialize-js/js/custom-initial.js') }}"></script>
+	<script src="{{ asset('/assets/libs/animate/wow.min.js') }}"></script>
+	<script>
+		new WOW().init();
+	</script>
+{% endblock %}
