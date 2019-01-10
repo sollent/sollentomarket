@@ -1,14 +1,11 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/Desctop/sollento/sollentoCirlceCI/sollentomarket
+    working_directory: ~/Desktop/sollento/sollentoCirlceCI/sollentomarket
     docker:
       - image: circleci/php:7.2.4-apache-stretch-node-browsers
     steps:
       - checkout
-      - run:
-          name: Install PHP MySQL
-          command: sudo docker-php-ext-install pdo_mysql
       - run:
           name: Composer
           command: sudo composer self-update
