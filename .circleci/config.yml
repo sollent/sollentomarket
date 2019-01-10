@@ -1,4 +1,4 @@
-# CircleCI for
+# CircleCI
 version: 2
 jobs:
   build:
