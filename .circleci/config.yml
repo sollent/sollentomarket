@@ -12,9 +12,9 @@ jobs:
       - run:
           name: Composer install
           command: composer install -n --prefer-dist
-      - run:
-          name: Run tests
-          command: vendor/phpunit/phpunit/phpunit
+#      - run:
+#          name: Run tests
+#          command: vendor/phpunit/phpunit/phpunit
   delpoy:
     working_directory: ~/Desktop/sollento/sollentoCirlceCI/sollentomarket
     docker:
