@@ -1,1 +1,2 @@
-echo 'Hello circleci'
+#!/bin/bash
+sudo rm -r /var/www/sollentoCI
