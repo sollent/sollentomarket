@@ -36,6 +36,9 @@ jobs:
       - run:
           name: Post deploy
           command: ssh -T $DROPLET_USER@$DROPLET_IP < bin/deploy/deploy
+      - run:
+          name: Success message
+          command: echo 'Deploy has been successfully completed'
 workflows:
   version: 2
   build-and-deploy:
