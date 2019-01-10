@@ -15,3 +15,43 @@ jobs:
       - run:
           name: Run tests
           command: vendor/phpunit/phpunit/phpunit
+  delpoy:
+    working_directory: ~/Desktop/sollento/sollentoCirlceCI/sollentomarket
+    docker:
+      - image: circleci/php:7.2.4-apache-stretch-node-browsers
+    steps:
+      - checkout
+      - run:
+          name: Composer install
+          command: composer install -n --prefer-dist
+      - run:
+          name: Clear cache
+          command: php bin/console cache:clear --env=prod --no-iteraction
+      - run:
+          name: Yarn and npm
+          command: sudo npm i && yarn install
+      - run:
+          name: Add droplet
+          command: ssh-keyscan -H $DROPLET_IP >> ~/.ssh/known_hosts
+#      - run:
+#          name: Pre-deploy
+#          command: ssh -T $DROPLET_USER:$DROPLET_IP < bin/deploy/pre_deploy.sh
+      - run:
+          name: Delpoy code
+          command: rsync -vzcrSLhp --exclude '.env' --delete ~/Desktop/sollento/sollentoCirlceCI/sollentomarket $DROPLET_USER@$DROPLET_IP:/var/www/sollentoCI
+      - run:
+          name: Post deploy
+          command: ssh -T $DROPLET_USER:$DROPLET_IP < bin/deploy/deploy.sh
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+
