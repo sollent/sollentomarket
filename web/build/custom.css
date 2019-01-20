@@ -2178,18 +2178,42 @@ body {
   /* Sidenav */
 }
 
-.header ul.sidenav li:first-child {
-  background: #ca4f54;
-  margin-bottom: 10px;
+.header .sidenav ul.sidenav-menu {
+  margin: 0;
 }
 
-.header ul.sidenav li:first-child a {
-  text-align: center;
-  font-size: 20px;
+.header .sidenav ul.sidenav-menu li.active {
+  background: rgba(202, 79, 84, 0.8);
+}
+
+.header .sidenav ul.sidenav-menu li.active a {
+  position: relative;
+  border-bottom: none !important;
+}
+
+.header .sidenav ul.sidenav-menu li.active i.material-icons {
+  display: block !important;
+  position: absolute;
+  left: -35px;
   color: whitesmoke;
 }
 
-.header ul.sidenav li:not(:first-child) a {
+.header .sidenav ul.sidenav-menu li:first-child {
+  background: #ca4f54;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  height: 56px;
+}
+
+.header .sidenav ul.sidenav-menu li:first-child a {
+  text-align: center;
+  font-size: 20px;
+  color: whitesmoke;
+  line-height: 56px;
+  border-bottom: none !important;
+}
+
+.header .sidenav ul.sidenav-menu li:not(:first-child) a {
   color: #585555;
   font-family: mainFont, sans-serif;
   font-weight: normal;
@@ -2198,8 +2222,87 @@ body {
   padding: 0;
 }
 
-.header ul.sidenav li:not(:last-child) a {
+.header .sidenav ul.sidenav-menu li:not(:first-child) a i.material-icons {
+  display: none;
+}
+
+.header .sidenav ul.sidenav-menu li:not(:last-child) a {
   border-bottom: 1px solid #e8e8e8;
+}
+
+.header .sidenav .sidenav-block-bottom {
+  position: absolute;
+  bottom: 75px;
+  margin-left: 24px;
+  width: 92%;
+}
+
+.header .sidenav .sidenav-block-bottom .sidenav-sitemap {
+  padding: 2px;
+}
+
+.header .sidenav .sidenav-block-bottom .sidenav-sitemap a {
+  color: #ca4f54;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.header .sidenav .sidenav-block-bottom .sidenav-address {
+  font-size: 13px;
+  padding: 2px;
+  color: #565656;
+}
+
+.header .sidenav .sidenav-block-bottom .sidenav-copyright {
+  font-size: 13px;
+  padding: 2px;
+  color: #565656;
+}
+
+.header .sidenav .sidenav-cart-block {
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-button a.btn-floating {
+  background: #ca4f54;
+  width: 100px;
+  height: 100px;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-button a.btn-floating i.material-icons {
+  line-height: 100px;
+  font-size: 3.0rem;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-information {
+  padding: 10px;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ca4f54;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-products {
+  font-size: 18px;
+  color: #ca4f54;
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-other-information {
+  display: block;
+  font-size: 13px;
+  color: rgba(202, 79, 84, 0.8);
+}
+
+.header .sidenav .sidenav-cart-block .sidenav-cart-going button.btn {
+  background: rgba(202, 79, 84, 0.8);
+  cursor: pointer;
+  width: 100%;
+  font-size: 17px;
+  text-transform: none;
 }
 
 .header .nav-content .cart-block {
@@ -2282,6 +2385,56 @@ body {
     width: 62%;
   }
 
+  .header .sidenav ul.sidenav-menu li.active i.material-icons {
+    display: block !important;
+    position: absolute;
+    left: unset;
+    right: 0;
+    color: whitesmoke;
+  }
+
+  .header .sidenav .sidenav-block-bottom {
+    margin-left: 10px;
+  }
+
+  .header .sidenav .sidenav-block-bottom .sidenav-sitemap a {
+    font-size: 14px;
+  }
+
+  .header .sidenav .sidenav-block-bottom .sidenav-address {
+    font-size: 12px;
+  }
+
+  .header .sidenav .sidenav-block-bottom .sidenav-copyright {
+    font-size: 12px;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-button a.btn-floating {
+    width: 82px;
+    height: 82px;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-button a.btn-floating i.material-icons {
+    line-height: 82px;
+    font-size: 2.4rem;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-count {
+    font-size: 17px;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-products {
+    font-size: 17px;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-information span.sidenav-cart-other-information {
+    font-size: 12px;
+  }
+
+  .header .sidenav .sidenav-cart-block .sidenav-cart-going button.btn {
+    font-size: 16px;
+  }
+
   .header .nav-content .cart-block .row .col:first-child {
     display: none;
   }
@@ -2294,7 +2447,8 @@ body {
     left: 50% !important;
   }
 
-  .header ul.sidenav li:not(:first-child) a {
+  .header .sidenav ul.sidenav-menu li:not(:first-child) a {
+    font-size: 16px;
     margin-left: 30px;
   }
 }
@@ -2332,5 +2486,11 @@ body {
 @media only screen and (max-width: 530px) {
   .header .nav-content .cart-block {
     width: 40%;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .sidenav .sidenav-block-bottom {
+    display: none;
   }
 }
