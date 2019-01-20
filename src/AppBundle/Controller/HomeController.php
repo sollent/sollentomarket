@@ -32,4 +32,13 @@ class HomeController extends Controller
         return $this->render('default/catalog-page.html.twig');
     }
 
+    /**
+     * @param Request $request
+     * @Route("/news", name="news-page-action")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function newsAction(Request $request) {
+        return $this->render('default/news-page.html.twig');
+    }
+
 }

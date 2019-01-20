@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./web/assets/scss/homepage.scss");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./web/assets/scss/catalog.scss");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./web/assets/scss/homepage.scss":
-/*!***************************************!*\
-  !*** ./web/assets/scss/homepage.scss ***!
-  \***************************************/
+/***/ "./web/assets/scss/catalog.scss":
+/*!**************************************!*\
+  !*** ./web/assets/scss/catalog.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./web/assets/scss/homepage.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./web/assets/scss/catalog.scss?");
 
 /***/ })
 

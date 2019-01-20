@@ -1,0 +1,135 @@
+{% extends 'common.html.twig' %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('build/news.css') }}">
+{% endblock %}
+
+{% block title %} Новости {% endblock %}
+
+{% block body %}
+	
+	{% block header %}
+		{{ parent() }}
+	{% endblock %}
+	
+	{% block wrapper_start %} {{ parent() }} {% endblock %}
+	
+	{% block main %}
+		
+		<div class="container">
+			<div class="main_block">
+				<div class="row before_news">
+					<div class="col xl3 l3 m3">
+						<div class="main_caption">
+							<h2>Новости</h2>
+						</div>
+					</div>
+					<div class="col xl9 l9 hide-on-med-and-down">
+						<nav class="search_bar">
+							<div class="nav-wrapper">
+								<form>
+									<div class="input-field">
+										<input id="search" type="search" placeholder="Search" required>
+										<label class="label-icon" for="search"><i class="material-icons">search</i></label>
+										<i class="material-icons">close</i>
+									</div>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col xl8 l8 main_news">
+						<div class="card">
+							<div class="card-image">
+								<img src="{{ asset('assets/img/pruducts/1.jpg') }}">
+								<span class="card-title center-align">Как вы думаете, то мы проготовили сегодня?</span>
+							</div>
+							<div class="card-content">
+								<p>Прошло 3 месяца, как вы купили SEO, а лиды все еще не идут и трафика мало? Разрывать договор или довериться? Объясняем, как понять, что SEO-подрядчик хорошо работает по сайту, даже если вы вообще ничего…</p>
+							</div>
+						</div>
+					</div>
+					<div class="col xl4 l4 popular_news hide-on-med-and-down">
+						<div class="card">
+							<div class="container">
+								<div class="card-title">Популярное</div>
+								<div class="card-content no-padding">
+									<ul class="popular_news_items">
+										<li class="news_item"><a href="">Как сформировать бюджет на покупку сайта?</a></li>
+										<li class="news_item"><a href="">Вы знали что DZ09 водонепроницаемы?</a></li>
+										<li class="news_item"><a href="">Главная новость нашего магазина</a></li>
+										<li class="news_item"><a href="">Как вы думаете, то мы проготовили сегодня?</a></li>
+										<li class="news_item"><a href="">Каждому именнику в подарок MP3 плеер</a></li>
+										<li class="news_item"><a href="">Использование промо-кодов на нашем сайте</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col m12 s12 popular_news show-on-medium-and-down hide-on-large-only">
+						<div class="card">
+							<div class="container">
+								<div class="card-title">Популярное</div>
+								<div class="card-content no-padding">
+									<ul class="popular_news_items">
+										<li class="news_item"><a href="">Как сформировать бюджет на покупку сайта?</a></li>
+										<li class="news_item"><a href="">Вы знали что DZ09 водонепроницаемы?</a></li>
+										<li class="news_item"><a href="">Главная новость нашего магазина</a></li>
+										<li class="news_item"><a href="">Как вы думаете, то мы проготовили сегодня?</a></li>
+										<li class="news_item"><a href="">Каждому именнику в подарок MP3 плеер</a></li>
+										<li class="news_item"><a href="">Использование промо-кодов на нашем сайте</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row news_list">
+					<div class="col xl4 l4 m6 s12">
+						<div class="card">
+							<div class="card-image">
+								<img src="{{ asset('assets/img/pruducts/4.jpg') }}">
+								<span class="card-title center-align">Как сформировать бюджет на покупку сайта?</span>
+							</div>
+							<div class="card-content">
+								<p>Прошло 3 месяца, как вы купили SEO, а лиды все еще не идут и трафика мало? Разрывать договор или ...</p>
+							</div>
+						</div>
+					</div>
+					<div class="col xl4 l4 m6 s12">
+						<div class="card">
+							<div class="card-image">
+								<img src="{{ asset('assets/img/pruducts/4.jpg') }}">
+								<span class="card-title center-align">Вы знали что DZ09 водонепроницаемы?</span>
+							</div>
+							<div class="card-content">
+								<p>Прошло 3 месяца, как вы купили SEO, а лиды все еще не идут и трафика мало? Разрывать договор или ...</p>
+							</div>
+						</div>
+					</div>
+					<div class="col xl4 l4 m6 s12">
+						<div class="card">
+							<div class="card-image">
+								<img src="{{ asset('assets/img/pruducts/4.jpg') }}">
+								<span class="card-title center-align">Главная новость нашего магазина</span>
+							</div>
+							<div class="card-content">
+								<p>Прошло 3 месяца, как вы купили SEO, а лиды все еще не идут и трафика мало? Разрывать договор или ...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	{% endblock %}
+	
+	{% block wrapper_end %} {{ parent() }} {% endblock %}
+	
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+
+{% endblock %}

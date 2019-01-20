@@ -6,6 +6,8 @@ Encore
     .addEntry('app', './web/assets/libs/materialize-sass/sass/materialize.scss')
     .addEntry('custom', './web/assets/scss/style.scss')
     .addEntry('homepage', './web/assets/scss/homepage.scss')
+    .addEntry('catalog', './web/assets/scss/catalog.scss')
+    .addEntry('news', './web/assets/scss/news.scss')
     .enableSassLoader()
     .autoProvidejQuery()
     .cleanupOutputBeforeBuild()

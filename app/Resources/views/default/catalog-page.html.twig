@@ -2,6 +2,7 @@
 
 {% block stylesheet %}
     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/catalog.css') }}">
 {% endblock %}
 
 {% block title %} Каталог {% endblock %}
@@ -19,6 +20,18 @@
         <div class="container">
             
             <div class="main_block">
+                <div class="row before_catalog">
+                    <div class="col xl3">
+                        <div class="main_caption">
+                            <h2>Каталог</h2>
+                        </div>
+                    </div>
+                    <div class="col xl9">
+                        <div class="page_info">
+                            <p>При заказе от 45 рублей мы дарим вам MP4-плеер. Посоветуйте часы DZ09 другу и получите 5 рублей прямым переводом.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col xl3 col-catalog-menu">
                         <div class="catalog_menu">

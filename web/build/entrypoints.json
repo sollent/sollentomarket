@@ -23,6 +23,22 @@
       "js": [
         "/build/homepage.js"
       ]
+    },
+    "catalog": {
+      "css": [
+        "/build/catalog.css"
+      ],
+      "js": [
+        "/build/catalog.js"
+      ]
+    },
+    "news": {
+      "css": [
+        "/build/news.css"
+      ],
+      "js": [
+        "/build/news.js"
+      ]
     }
   }
 }
