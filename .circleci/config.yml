@@ -12,10 +12,7 @@ jobs:
           command: sudo composer self-update
       - run:
           name: Composer install
-          command: composer install -n --prefer-dist
-      - run:
-              name: Run tests
-              command: vendor/phpunit/phpunit/phpunit    
+          command: composer install -n --prefer-dist    
   deploy:
     working_directory: ~/Desktop/sollento/sollentoCirlceCI/sollentomarket
     docker:
