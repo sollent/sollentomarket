@@ -1,0 +1,48 @@
+<div class="header">
+	
+	{#Navbar#}
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<div class="container">
+					<a href="" class="brand-logo">Sollento market</a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="{{ path('homepage-action') }}">Главная</a></li>
+						<li><a href="{{ path('catalog-page-action') }}">Каталог</a></li>
+						<li><a href="{{ path('news-page-action') }}">Новости</a></li>
+						<li><a href="">Контакты</a></li>
+						<li><a href="">О нас</a></li>
+					</ul>
+				</div>
+				<a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			</div>
+			{% block cart_header_block %}
+				{% if app.request.get('_route') != 'homepage-action' %}
+					<div class="nav-content">
+						<div class="cart-block">
+							<div class="row">
+								<div class="col hide-on-large-only">
+									<a href="">12 товаров</a>
+								</div>
+								<div class="col xl5 cart-button-col">
+									<a href="#cartModal" class="btn-floating btn-large halfway-fab waves-effect waves-light teal cart-big-button modal-trigger">
+										<i class="material-icons">add_shopping_cart</i>
+									</a>
+								</div>
+								<div class="col xl7 hide-on-med-and-down">
+									<a href="">12 товаров</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			{% endblock %}
+		</nav>
+	</div>
+	
+	{% include 'components/cart.html.twig' %}
+	
+	{#Responsive menu#}
+	{% include 'components/responsive-menu.html.twig' %}
+	
+</div>

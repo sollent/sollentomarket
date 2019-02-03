@@ -8,7 +8,7 @@
   box-shadow: none;
 }
 
-.main_block {
+.news_block {
   margin-top: 30px;
   padding-bottom: 40px;
   .before_news {
@@ -87,7 +87,7 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  .main_block {
+  .news_block {
     .before_news {
       nav.search_bar {
         width: 94%;
@@ -98,7 +98,7 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .main_block {
+  .news_block {
     .before_news {
       .main_caption{
         h2 {
@@ -140,7 +140,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .main_block {
+  .news_block {
     .main_news {
       .card {
         .card-image {
@@ -154,7 +154,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .main_block {
+  .news_block {
     .before_news {
       .main_caption {
         h2 {

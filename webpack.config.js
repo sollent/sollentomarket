@@ -8,6 +8,7 @@ Encore
     .addEntry('homepage', './web/assets/scss/homepage.scss')
     .addEntry('catalog', './web/assets/scss/catalog.scss')
     .addEntry('news', './web/assets/scss/news.scss')
+    .addEntry('product', './web/assets/scss/product.scss')
     .enableSassLoader()
     .autoProvidejQuery()
     .cleanupOutputBeforeBuild()

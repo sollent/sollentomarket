@@ -9,5 +9,7 @@
   "build/homepage.js": "/build/homepage.js",
   "build/news.css": "/build/news.css",
   "build/news.js": "/build/news.js",
+  "build/product.css": "/build/product.css",
+  "build/product.js": "/build/product.js",
   "build/fonts/Proxima_Nova_Black.woff": "/build/fonts/Proxima_Nova_Black.41addb46.woff"
 }

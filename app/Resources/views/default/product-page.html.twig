@@ -1,0 +1,164 @@
+{% extends 'common.html.twig' %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('build/product.css') }}">
+{% endblock %}
+
+{% block title %} Продукт {% endblock %}
+
+{% block body %}
+	
+	{% block header %}
+		{{ parent() }}
+	{% endblock %}
+	
+	{% block wrapper_start %} {{ parent() }} {% endblock %}
+	
+	{% block main %}
+		
+		<div class="container">
+			<div class="product_block">
+				<div class="row">
+					<h2 class="show-on-medium-and-down hide-on-large-only before-image-block-caption">Умные часы DZ09</h2>
+					<div class="col xl7 l7">
+						<div class="product-image">
+							<div class="row">
+								<img class="materialboxed" src="{{ asset('assets/img/pruducts/1.jpg') }}" alt="">
+							</div>
+							<div class="row">
+								<img class="materialboxed" src="{{ asset('assets/img/pruducts/2.jpg') }}" alt="">
+								<img class="materialboxed" src="{{ asset('assets/img/pruducts/3.jpg') }}" alt="">
+								<img class="materialboxed" src="{{ asset('assets/img/pruducts/4.jpg') }}" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col xl5 l5 right-block">
+						<div class="row">
+							<div class="col s12">
+								<ul class="tabs">
+									<li class="tab col s6"><a class="active" href="#product-info">О продукте</a></li>
+									<li class="tab col s6"><a href="#product-characteristic">Характеристики</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="product-right-info" id="product-info">
+							<div class="product-caption">
+								<h2 class="hide-on-med-and-down">Умные часы DZ09</h2>
+							</div>
+							<div class="product-description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ea eaque esse
+									est fuga illo iusto, necessitatibus obcaecati, praesentium quod ratione soluta
+									suscipit unde veniam. Eius iste nostrum odio provident quo. Assumenda autem
+									doloribus ducimus fugiat, illum incidunt iste itaque odio officiis, placeat quos
+									ratione recusandae tenetur veniam, voluptatum?</p>
+								<a href="" class="full_description_link">Подробное описание и характеристики</a>
+							</div>
+						</div>
+						<div id="product-characteristic">
+							<table class="striped">
+								<thead>
+								<tr>
+									<th>Name</th>
+									<th></th>
+									<th>Item Name</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>Alvin</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								<tr>
+									<td>Alan</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								<tr>
+									<td>Jonathan</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								<tr>
+									<td>Jonathan</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								<tr>
+									<td>Jonathan</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								<tr>
+									<td>Jonathan</td>
+									<td></td>
+									<td>Lorem ipsum dolor sit amet, consectetur.</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="buy-info">
+							<div class="product-price">
+								<span class="product-price-caption">Цена: </span>
+								<span class="product-price-value">38 BYN</span>
+							</div>
+							<div class="product-color-select">
+								<div class="input-field col s12">
+									<select>
+										<option value="" disabled selected>Выберите цвет:</option>
+										<option value="1">Темный</option>
+										<option value="2">Золотой</option>
+										<option value="3">Белый</option>
+									</select>
+								</div>
+							</div>
+							<div class="add-to-cart">
+								<a class="waves-effect waves-light btn"><i
+											class="material-icons right">shopping_cart</i>Добавить в корзину</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row additional-info-block">
+					<div class="col xl7 l7">
+						<div class="about-product-info">
+							{#<div class="card">#}
+								<h4>Описание DZ09</h4>
+								<p>Smart Watch DZ09 – это часы-телефон. Гаджет, который получится использовать, как
+									автономный девайс или синхронизировать с телефоном, получать уведомления, дистанционно
+									управлять интерфейсом смартфона. Честный обзор на смарт-часы DZ09 и их описание помогут
+									объективно оценить устройство и сделать правильные выводы до покупки. Российскому
+									покупателю также доступны основные расходники и запасные элементы для устройства.
+									Стоимость DZ09 начинается от $16, средний ценник составляет порядка $30.
+								</p>
+							{#</div>#}
+						</div>
+					</div>
+					<div class="col xl1 l1 vertical-line hide-on-med-and-down"></div>
+					<div class="col xl4 l4">
+						<div class="bonuses-info">
+							{#<div class="card">#}
+								<h4>Бонусы при покупке</h4>
+								<p>В зависимости от версии приложения и прошивки делать это получится с разной степенью
+									комфортности. Есть модели, позволяющие без проблем и затруднений управлять плеером, но в
+									некоторых эта возможность активируется только в том случае, если все треки вручную
+									добавить в созданный плей-лист.
+								</p>
+							{#</div>#}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	{% endblock %}
+	
+	{% block wrapper_end %} {{ parent() }} {% endblock %}
+	
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+
+{% endblock %}

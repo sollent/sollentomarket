@@ -9,93 +9,16 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-
-    {% block header %}
 	
-		<div class="header">
-			<div class="navbar-fixed">
-				<nav>
-					<div class="nav-wrapper">
-						<div class="container">
-							<a href="" class="brand-logo">Sollento market</a>
-							<ul class="right hide-on-med-and-down">
-								<li><a href="{{ path('homepage-action') }}">Главная</a></li>
-								<li><a href="{{ path('catalog-page-action') }}">Каталог</a></li>
-								<li><a href="{{ path('news-page-action') }}">Новости</a></li>
-								<li><a href="">Контакты</a></li>
-								<li><a href="">О нас</a></li>
-							</ul>
-						</div>
-						<a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-					</div>
-					{% block cart_header_block %}
-						<div class="nav-content">
-							<div class="cart-block">
-								<div class="row">
-									<div class="col hide-on-large-only">
-										<a href="">12 товаров</a>
-									</div>
-									<div class="col xl5 cart-button-col">
-										<a class="btn-floating btn-large halfway-fab waves-effect waves-light teal cart-big-button">
-											<i class="material-icons">add_shopping_cart</i>
-										</a>
-									</div>
-									<div class="col xl7 hide-on-med-and-down">
-										<a href="">12 товаров</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					{% endblock %}
-				</nav>
-			</div>
-			
-			<div class="sidenav" id="mobile-demo">
-				<ul class="sidenav-menu">
-					<li><a href="" class="brand-logo">Sollento</a></li>
-					<li><a href="{{ path('homepage-action') }}"><i class="material-icons">home</i>Главная</a></li>
-					<li class="active"><a href="{{ path('catalog-page-action') }}"><i class="material-icons">apps</i>Каталог</a></li>
-					<li><a href="{{ path('news-page-action') }}"><i class="material-icons">content_paste</i>Новости</a></li>
-					<li><a href=""><i class="material-icons">local_phone</i>Контакты</a></li>
-					<li><a href=""><i class="material-icons">people</i>О нас</a></li>
-				</ul>
-				<div class="sidenav-cart-block">
-					<div class="container">
-						<div class="sidenav-cart-button center">
-							<a class="btn-floating btn-large waves-effect waves-light pulse">
-								<i class="material-icons">shopping_cart</i>
-							</a>
-						</div>
-						<div class="sidenav-cart-information center-align">
-							<span class="sidenav-cart-count">12 </span>
-							<span class="sidenav-cart-products">товаров</span>
-							<span class="sidenav-cart-other-information">в вашей корзине</span>
-						</div>
-						<div class="sidenav-cart-going center">
-							<button class="btn waves-effect waves-light">Перейти
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="sidenav-block-bottom">
-					<div class="container">
-						<div class="sidenav-sitemap">
-							<a href="">Карта сайта</a>
-						</div>
-						<div class="sidenav-address">
-							г.Минск ул.Рафиева 52-48, Офис 902
-						</div>
-						<div class="sidenav-copyright">
-							© 2009-2019 iMedia.by
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+	{% block header %}
+		{% include 'components/header.html.twig' %}
 	{% endblock %}
 	
 	{% block wrapper_start %}
+		{# Preloader block #}
+		<div id="site-preloader" class="preloader">
+			<div class="loader"></div>
+		</div>
 		<div class="wrapper">
 	{% endblock %}
 	
@@ -104,46 +27,19 @@
 	{% endblock %}
 	
 	{% block footer %}
-		
-		<footer class="page-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12">
-						<h5 class="white-text">Sollento market</h5>
-						<p class="grey-text text-lighten-4">Мы рады видеть вас в нашем интернет-магазине. У нас вы найдете для себя лучших помошников в сдаче экзаменов, контрольных и самостоятельных работ.</p>
-					</div>
-					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text">Меню</h5>
-						<ul>
-							<li><a class="grey-text text-lighten-3" href="">Главная</a></li>
-							<li><a class="grey-text text-lighten-3" href="">Каталог</a></li>
-							<li><a class="grey-text text-lighten-3" href="">Новости</a></li>
-							<li><a class="grey-text text-lighten-3" href="">Контакты</a></li>
-							<li><a class="grey-text text-lighten-3" href="">О нас</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="footer-copyright">
-				<div class="container">
-					© 2018 Copyright Text
-					<a class="grey-text text-lighten-4 right" href="#!">Сайт разработан на Symfony 3</a>
-				</div>
-			</div>
-		</footer>
-	
-	
+		{% include 'components/footer.html.twig' %}
 	{% endblock %}
-	
-	
+
+
 {% endblock %}
 
 {% block javascripts %}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="{{ asset('/assets/libs/materialize-js/js/materialize.min.js') }}"></script>
+	<script src="{{ asset('assets/js/common.js') }}"></script>
 	<script src="{{ asset('/assets/libs/materialize-js/js/custom-initial.js') }}"></script>
 	<script src="{{ asset('/assets/libs/animate/wow.min.js') }}"></script>
 	<script>
-		new WOW().init();
+        new WOW().init();
 	</script>
 {% endblock %}

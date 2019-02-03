@@ -41,4 +41,22 @@ class HomeController extends Controller
         return $this->render('default/news-page.html.twig');
     }
 
+    /**
+     * @param Request $request
+     * @Route("/product", name="product-page-action")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function productAction(Request $request) {
+        return $this->render('default/product-page.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @Route("/cart", name="cart-page-action")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function cartPage(Request $request) {
+        return $this->render('default/cart-page.html.twig');
+    }
+
 }

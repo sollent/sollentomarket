@@ -12,4 +12,10 @@ $(document).ready(function(){
         outDuration: 500
     });
     $('.slider').slider();
+    $('select').formSelect();
+    $('.tabs').tabs();
+    $('.materialboxed').materialbox();
+    // $('.carousel').carousel({
+    //     dist: -200
+    // });
 });

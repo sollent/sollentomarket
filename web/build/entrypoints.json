@@ -39,6 +39,14 @@
       "js": [
         "/build/news.js"
       ]
+    },
+    "product": {
+      "css": [
+        "/build/product.css"
+      ],
+      "js": [
+        "/build/product.js"
+      ]
     }
   }
 }
